@@ -37,7 +37,7 @@ export function queryElementAspects(flags: Flags) {
         });
 
         let processedAspects = 0;
-        let lastAspectId = "";
+        let lastAspectId = ""; // saving last aspect id to simulate that something is done with the aspect
         const callback = (aspect: ElementAspect) => {
             lastAspectId = aspect.id;
             ++processedAspects;
