@@ -1,0 +1,44 @@
+{
+    "name": "memory-usage-during-querying-test",
+    "version": "1.0.0",
+    "main": "dist/main.js",
+    "scripts": {
+        "build:debug": "tsc 1>&2",
+        "build": "npm run build:debug && backend-webpack-tools build -s ./lib/main.js -o ./dist",
+        "clean": "rimraf lib && rimraf dist",
+        "rebuild": "npm run clean && npm run build",
+        "rebuild:debug": "npm run clean && npm run build:debug",
+        "start": "node ./dist/main.js",
+        "debug": "node ./lib/main.js",
+        "lint": "eslint --max-warnings=0 --ext .ts src 1>&2"
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@itwin/backend-webpack-tools": "~4.1.1",
+        "@itwin/build-tools": "~4.1.1",
+        "@types/node": "^20.8.8",
+        "eslint": "^8.52.0",
+        "rimraf": "^5.0.5",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "@itwin/core-backend": "~4.1.1",
+        "@itwin/core-bentley": "~4.1.1",
+        "@itwin/core-common": "~4.1.1",
+        "@itwin/core-geometry": "~4.1.1",
+        "@itwin/core-i18n": "~4.1.1",
+        "@itwin/core-quantity": "~4.1.1",
+        "@itwin/ecschema-metadata": "~4.1.1",
+        "bunyan": "^1.8.15",
+        "bunyan-seq": "^1.0.0",
+        "dotenv": "^16.3.1",
+        "encoding": "^0.1.13"
+    },
+    "eslintConfig": {
+        "env": {
+            "node": true
+        }
+    }
+}

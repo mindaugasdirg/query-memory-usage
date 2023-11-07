@@ -1,0 +1,17 @@
+{
+    "extends": "./node_modules/@itwin/build-tools/tsconfig-base.json",
+    "compilerOptions": {
+        "declaration": false,
+        "declarationMap": false,
+        "noUnusedLocals": true,
+        "noFallthroughCasesInSwitch": true,
+        "incremental": true,
+        "tsBuildInfoFile": "./lib/tsconfig.tsbuildinfo",
+        "outDir": "./lib",
+        "resolveJsonModule": true,
+        "types": ["node"],
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    "include": ["./src/**/*.ts*"]
+}
